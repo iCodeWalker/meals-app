@@ -1,16 +1,18 @@
 import Link from "next/link";
-import logoImg from "@/assets/logo.png";
 // In next projects the image is imported as an object and we have to access the path using src property of the image object
+import logoImg from "@/assets/logo.png";
+// Import the classes from main-header.module.css as an Object and than access the properties
+import Styles from "./main-header.module.css";
 
 const MainHeader = () => {
   return (
-    <header>
-      <Link href="/">
+    <header className={Styles.header}>
+      <Link href="/" className={Styles.logo}>
         <img src={logoImg.src} alt="logo" />
         Nextlevel Food
       </Link>
 
-      <nav>
+      <nav className={Styles.nav}>
         <ul>
           <li>
             <Link href="/meals">Browse Meals</Link>
