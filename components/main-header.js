@@ -3,12 +3,14 @@ import Link from "next/link";
 import logoImg from "@/assets/logo.png";
 // Import the classes from main-header.module.css as an Object and than access the properties
 import Styles from "./main-header.module.css";
+import Image from "next/image";
 
 const MainHeader = () => {
   return (
     <header className={Styles.header}>
       <Link href="/" className={Styles.logo}>
-        <img src={logoImg.src} alt="logo" />
+        {/* <img src={logoImg.src} alt="logo" /> */}
+        <Image src={logoImg} alt="logo" priority />
         Nextlevel Food
       </Link>
 
