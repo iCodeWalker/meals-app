@@ -25,3 +25,22 @@ Now we can access the css clases defined in the file as properties of the import
     <Image src={logoImg} alt="logo" priority />
 
 6. As in Styles.header-background "header-background" is an invalid property name in JS so we have to use it like Styles["header-background"]
+
+7. We cannot use useState hook in Server Components. useState only works on Client Components.
+   By default Next.js marks components as Server Component.
+
+8. React Server Components and Client Components
+
+   React is a pure Client Side library it receives the HTML file that contains the client-side JS code and running the JS code in the Client Browser.
+
+   Next.js is a fullstack framework, so code is also executed on the backend. The backend server executes the server component functions and outputs the HTML code to be rendererd on the. The client side receives and renders the HTML code.
+
+   RSCs:
+   React server component are only rendered on the server.
+   By default all React components in Next.js app are RSCs.
+   Advantage : Less client side JS code, Good for SEO.
+
+   Client Component:
+   Components that are pre-rendered on the server but can also render on the client side. useState or useEffect hooks are not available on the Server side.
+   We have to use 'use client' directive in the component whom we want to render on client side also.
+   Advantage : client side interactivity and features.
