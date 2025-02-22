@@ -23,3 +23,5 @@ Now we can access the css clases defined in the file as properties of the import
    We add "priority" property when we have to laod images on priority.
 
     <Image src={logoImg} alt="logo" priority />
+
+6. As in Styles.header-background "header-background" is an invalid property name in JS so we have to use it like Styles["header-background"]
