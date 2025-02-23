@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 // In next projects the image is imported as an object and we have to access the path using src property of the image object
 import logoImg from "@/assets/logo.png";
@@ -7,10 +5,11 @@ import logoImg from "@/assets/logo.png";
 import Styles from "./main-header.module.css";
 import Image from "next/image";
 import MainHeaderBackground from "./main-header-background";
-import { usePathname } from "next/navigation";
+// import { usePathname } from "next/navigation";
+import NavLink from "./nav-link";
 
 const MainHeader = () => {
-  const path = usePathname(); // this hook returns us the current active path
+  // const path = usePathname(); // this hook returns us the current active path
   return (
     <>
       <MainHeaderBackground />
@@ -24,20 +23,22 @@ const MainHeader = () => {
         <nav className={Styles.nav}>
           <ul>
             <li>
-              <Link
+              <NavLink href="/meals" title="Browse Meals" />
+              {/* <Link
                 href="/meals"
                 className={path.startsWith("/meals") ? Styles.active : ""}
               >
                 Browse Meals
-              </Link>
+              </Link> */}
             </li>
             <li>
-              <Link
+              <NavLink href="/community" title="Foodies Community" />
+              {/* <Link
                 href="/community"
                 className={path.startsWith("/community") ? Styles.active : ""}
               >
                 Foodies Community
-              </Link>
+              </Link> */}
             </li>
           </ul>
         </nav>

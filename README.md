@@ -44,3 +44,5 @@ Now we can access the css clases defined in the file as properties of the import
    Components that are pre-rendered on the server but can also render on the client side. useState or useEffect hooks are not available on the Server side.
    We have to use 'use client' directive in the component whom we want to render on client side also.
    Advantage : client side interactivity and features.
+
+9. To use Client Side components efficiently we should bifurcate the components into more simpler components as possible.
