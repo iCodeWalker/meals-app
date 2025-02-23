@@ -50,3 +50,7 @@ Now we can access the css clases defined in the file as properties of the import
 10. When using dynamic images i.e. the images coming from backend or database we have to use the "Fill" attribute on the <Image> element to optimize the image properly, as Next.js does not know thw size of the image and cannot provide the suitable height and width to the image as it does in case of local used images at the time of build so we have to provide the "Fill" so that it can fill the whole space that is available for the image.
 
 <Image src={image} alt={title} fill />
+
+11. better-sqlite3 is a package that helps us to work with sql database. we will use it as it can be used locally without setting any extra database server.
+
+run command node initdb.js to create the meals.db
