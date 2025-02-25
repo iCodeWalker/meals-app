@@ -67,3 +67,7 @@ And when we reload than the page is recreated.
 Untill the data is loaded the content of the loading.js is shown as a fallback.
 
 15. For Granular Loading State Management we can use <Suspense> component provided by React. <Suspense> helps us to handle loading states and show fallback content untill some data or resource is being loaded.
+
+16. To handle potential errors like data loading fails, we use error.js component.
+
+error.js must be client component. 'use client'
