@@ -57,3 +57,11 @@ run command node initdb.js to create the meals.db
 
 12. To fetch data from the database we can use Server Side components, without using any fetch request or useEffects.
     we can make components async in next js and use promises directly.
+
+13. Next.js performs some preety agressive caching under the hood, it caches the page that we visited including the data of that page and when we revisits the same page from another page, next.js loads the page from the cache. So that it can show the page as quickly as possible.
+
+And when we reload than the page is recreated.
+
+14. loading.js file becomes active when if page.js file next to it or any nested page.js or layout.js file is loading data.
+
+Untill the data is loaded the content of the loading.js is shown as a fallback.
