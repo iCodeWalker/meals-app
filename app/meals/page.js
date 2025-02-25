@@ -1,8 +1,13 @@
 import Link from "next/link";
 import Styles from "./page.module.css";
 import MealsGrid from "@/components/meals/meals-grid";
+import { getMeals } from "@/lib/meals";
 
-const MealsPage = () => {
+const MealsPage = async () => {
+  // we can add async to server components that we can't do in Client Components in react
+  // we can now access data from database without using any useEffect or fetch request.
+  const meals = await getMeals();
+  console.log(meals, "measl");
   return (
     <>
       <header className={Styles.header}>
@@ -18,7 +23,7 @@ const MealsPage = () => {
         </p>
       </header>
       <main className={Styles.main}>
-        <MealsGrid meals={[]} />
+        <MealsGrid meals={meals} />
       </main>
     </>
   );

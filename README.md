@@ -54,3 +54,6 @@ Now we can access the css clases defined in the file as properties of the import
 11. better-sqlite3 is a package that helps us to work with sql database. we will use it as it can be used locally without setting any extra database server.
 
 run command node initdb.js to create the meals.db
+
+12. To fetch data from the database we can use Server Side components, without using any fetch request or useEffects.
+    we can make components async in next js and use promises directly.

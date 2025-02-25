@@ -7,7 +7,7 @@ const MealsGrid = ({ meals }) => {
       {meals.map((meal) => {
         return (
           <li key={meal.id}>
-            <MealItem {...meals} />
+            <MealItem {...meal} />
           </li>
         );
       })}
