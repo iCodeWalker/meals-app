@@ -65,3 +65,5 @@ And when we reload than the page is recreated.
 14. loading.js file becomes active when if page.js file next to it or any nested page.js or layout.js file is loading data.
 
 Untill the data is loaded the content of the loading.js is shown as a fallback.
+
+15. For Granular Loading State Management we can use <Suspense> component provided by React. <Suspense> helps us to handle loading states and show fallback content untill some data or resource is being loaded.
