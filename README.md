@@ -71,3 +71,5 @@ Untill the data is loaded the content of the loading.js is shown as a fallback.
 16. To handle potential errors like data loading fails, we use error.js component.
 
 error.js must be client component. 'use client'
+
+17. We can add not-found.js component inside root "app" folder to have a custom page if the url user enters does not supports.
