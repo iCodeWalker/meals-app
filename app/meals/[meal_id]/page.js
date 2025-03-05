@@ -1,9 +1,17 @@
 import Image from "next/image";
 import Styles from "./page.module.css";
 import { getMeal } from "@/lib/meals";
+import { notFound } from "next/navigation";
 
 const MealDetailsPage = ({ params }) => {
   const meal = getMeal(params.meal_id);
+
+  // ############## To handle if user searches for some meal that does not exists #######
+  if (!meal) {
+    // #### we have to not found page here ####
+    notFound(); // IT is a built in function that calls the nearest not-found or error page
+    // Stops the component from executing and it shows the closest not found or error page
+  }
 
   // ############### To have line breaks in the text #########
   meal.instructions = meal.instructions.replace(/\n/g, "<br/>");

@@ -73,3 +73,7 @@ Untill the data is loaded the content of the loading.js is shown as a fallback.
 error.js must be client component. 'use client'
 
 17. We can add not-found.js component inside root "app" folder to have a custom page if the url user enters does not supports.
+
+18. "notFound()" function from next/navigation is used to show not-found or error page.
+    IT is a built in function that calls the nearest not-found or error page
+    Stops the component from executing and it shows the closest not found or error page.
