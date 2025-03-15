@@ -57,6 +57,7 @@ const ImagePicker = ({ label, name }) => {
           ref={imageInputRef}
           // multiple : to allow user to pick multiple files
           onChange={handleChangeImage}
+          required // This ensures that the <form> can't be submitted without an image being selected.
         />
         <button
           className={Styles.button}
