@@ -99,3 +99,5 @@ setPickedImage(fileReader.result);
 20. "use server"; // a directive that creates a so called server action, which is function that is guaranted to be executed on the server. and only there on server.
 
 In Next js "action" props of form, Next.js behind the scene created a request and the send the request to the Next.js server that is serving the website, and than we can handle the form submission there.
+
+Server actions cannot be used in client components. Components that uses 'use client' directive.
