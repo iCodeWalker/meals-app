@@ -1,27 +1,12 @@
 import ImagePicker from "@/components/meals/image-picker";
 import classes from "./page.module.css";
+import { shareMeal } from "@/lib/actions";
 
 const ShareMealPage = () => {
   // A function that stoes the form: as in Nextjs we don't have to collect the data from the form and than send the data to the backend.
 
-  async function shareMeal(formData) {
-    "use server"; // a directive that creates a so called server action, which is function that is guaranted to be executed on the server and only there on server.
-
-    // in Next js "action" props of form, Next.js behind the scene created a request and the send the request to the Next.js server that is serving the website, and than we can handle the form submission there.
-
-    const meal = {
-      // name props is used to access the value of input field.
-      title: formData.get("title"),
-      summary: formData.get("summary"),
-      instructions: formData.get("instructions"),
-      image: formData.get("image"),
-      creator: formData.get("name"),
-      creator_email: formData.get("email"),
-    };
-
-    console.log(meal);
-  }
-
+  // By importing server actions from different file now we can use this component as a 'client component' also
+  // use client
   return (
     <>
       <header className={classes.header}>
