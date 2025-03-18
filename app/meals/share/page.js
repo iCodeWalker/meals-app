@@ -1,6 +1,7 @@
 import ImagePicker from "@/components/meals/image-picker";
 import classes from "./page.module.css";
 import { shareMeal } from "@/lib/actions";
+import MealFormSubmitButton from "@/components/meals/meal-form-submit-button";
 
 const ShareMealPage = () => {
   // A function that stoes the form: as in Nextjs we don't have to collect the data from the form and than send the data to the backend.
@@ -46,7 +47,8 @@ const ShareMealPage = () => {
           </p>
           <ImagePicker label="Your Image" name="image" />
           <p className={classes.actions}>
-            <button type="submit">Share Meal</button>
+            {/* <button type="submit">Share Meal</button> */}
+            <MealFormSubmitButton />
           </p>
         </form>
       </main>
