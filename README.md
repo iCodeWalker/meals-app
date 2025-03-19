@@ -101,3 +101,11 @@ setPickedImage(fileReader.result);
 In Next js "action" props of form, Next.js behind the scene created a request and the send the request to the Next.js server that is serving the website, and than we can handle the form submission there.
 
 Server actions cannot be used in client components. Components that uses 'use client' directive.
+
+21. We have to clear the previous cache of the meals page as Next.js regresivley caches the data and even on saving the meal we won't be able to see the newly added meal on the meals page. To delete the previous cache next js has a built in function and we can use it here.
+
+// This function tells next.js to revalidate the cache that belongs to a certain route path
+revalidatePath("/meals");
+
+To revalidate the nested pages we have to pass a second arg = revalidatePath("/meals", 'layout');
+default value is 'page' for second arg
