@@ -3,10 +3,28 @@ import Styles from "./page.module.css";
 import { getMeal } from "@/lib/meals";
 import { notFound } from "next/navigation";
 
-export const metaData = {
-  title: "All meals",
-  description: "Browse the delicious meals shared by our community.",
-};
+// ############ Adding Dynamic meta data ############
+// Next js will look for the function naming 'generateMetadata'
+// generateMetadata function receives same data as our page receives as "props"
+export async function generateMetadata({ params }) {
+  // Get the meal for which page is generated
+  const meal = getMeal(params.meal_id);
+
+  if (!meal) {
+    notFound();
+  }
+
+  return {
+    title: meal.title,
+    description: meal.summary,
+  };
+}
+
+// ############ Adding Static meta data ############
+// export const metadata = {
+//   title: "All meals",
+//   description: "Browse the delicious meals shared by our community.",
+// };
 
 const MealDetailsPage = ({ params }) => {
   const meal = getMeal(params.meal_id);
