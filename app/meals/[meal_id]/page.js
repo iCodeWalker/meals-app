@@ -3,6 +3,11 @@ import Styles from "./page.module.css";
 import { getMeal } from "@/lib/meals";
 import { notFound } from "next/navigation";
 
+export const metaData = {
+  title: "All meals",
+  description: "Browse the delicious meals shared by our community.",
+};
+
 const MealDetailsPage = ({ params }) => {
   const meal = getMeal(params.meal_id);
 
