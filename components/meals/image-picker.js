@@ -33,6 +33,7 @@ const ImagePicker = ({ label, name }) => {
 
     // we can access the generated DataUrl in "fileReader.result" and not as an input to the function.
 
+    /** This function is triggered when the file reader has finished reading the file */
     fileReader.onload = () => {
       setPickedImage(fileReader.result);
     };

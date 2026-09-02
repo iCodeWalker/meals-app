@@ -5,10 +5,10 @@ import classes from "./page.module.css";
 import { shareMeal } from "@/lib/actions";
 import MealFormSubmitButton from "@/components/meals/meal-form-submit-button";
 
-import { useActionState } from "react";
+import { useActionState } from "react"; // previously it was useFormState
 
 const ShareMealPage = () => {
-  // A function that stoes the form: as in Nextjs we don't have to collect the data from the form and than send the data to the backend.
+  // A function that stores the form: as in Nextjs we don't have to collect the data from the form and than send the data to the backend.
 
   // By importing server actions from different file now we can use this component as a 'client component' also
   // use client
